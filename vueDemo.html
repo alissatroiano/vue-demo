@@ -1,0 +1,12 @@
+<script setup>
+    const route = useRoute()
+    const data = await fetchSomeData(route.params.id)
+    <script>
+
+        <template>
+            <div>
+                <h1>{{ data.title }}</h1>
+                <p> {{ data.body }}</p>
+                <NestedComponenthatAlsoFetches />
+                </div>
+            </template>
